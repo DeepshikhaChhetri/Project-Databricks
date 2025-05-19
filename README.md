@@ -99,6 +99,9 @@ Smallest Cohorts: May (16), June (10)
 There is a clear and consistent decline in new customer acquisition from January to June 2024.
 Suggests a need to investigate marketing effectiveness, seasonal demand, or changes in acquisition channels.
 
+<img width="503" alt="image" src="https://github.com/user-attachments/assets/fe3a6316-f93a-4dfa-ad37-9257965f5021" />
+
+
 ### Final Summary & Business Insights
 This project showcased the power of the modern data stack for customer retention analytics:
 - SQL-driven cohort analysis helped quantify and visualize how quickly customers repurchase.
