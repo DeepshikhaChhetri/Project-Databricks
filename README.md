@@ -45,7 +45,7 @@ Three visualizations were developed to analyze customer behavior by cohort. Belo
 
 ### Key Performance Indicators (KPIs)
 Based on the analysis of the e-commerce dataset, the following summary metrics were identified:
-- Total Customers: 1,000
+- Total Customers: 200
 - Total Orders: 1,000
 - Total Sales: $156,795
 
@@ -99,7 +99,7 @@ Smallest Cohorts: May (16), June (10)
 There is a clear and consistent decline in new customer acquisition from January to June 2024.
 Suggests a need to investigate marketing effectiveness, seasonal demand, or changes in acquisition channels.
 
-<img width="533" alt="image" src="https://github.com/user-attachments/assets/6640d054-4ef1-424b-99e1-0362d7e3a00d" />
+<img width="531" alt="image" src="https://github.com/user-attachments/assets/dbeac9b6-9616-41f4-88d1-65c0f2dad7ab" />
 
 ### Final Summary & Business Insights
 This project showcased the power of the modern data stack for customer retention analytics:
@@ -114,3 +114,6 @@ Investigate factors causing acquisition decline and optimize marketing efforts a
 
 ## Final Databricks project with SQL Queries and Visualisation: 
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html
+
+## Presentation Video:
+https://www.loom.com/share/264e2efa4ef0416badbe6484f0985732?sid=d591e565-22df-4542-a6d6-21febc999e26
