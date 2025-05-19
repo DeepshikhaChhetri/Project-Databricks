@@ -118,11 +118,11 @@ This project showcased the power of the modern data stack for customer retention
 - Address issues behind weak repeat engagement in newer cohorts.
 - Investigate factors causing acquisition decline and optimise marketing efforts accordingly.
 
-## Final Databricks project with SQL Queries and Visualisation: [
+## Final Databricks project with SQL Queries and Visualisation: 
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html
 
 ## SQL Codebook:
 https://github.com/DeepshikhaChhetri/Project-Databricks/blob/e526a332aadd49c0b1cd3b8e22ea09fbab94aa30/SQL-Query
 
 ## Presentation Video:
-
+https://www.loom.com/share/bc71b891ec1f4df588769f7da9189ff7?sid=cee6388d-7d8c-4897-9580-25060f781662
