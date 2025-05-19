@@ -103,17 +103,20 @@ Suggests a need to investigate marketing effectiveness, seasonal demand, or chan
 
 ### Final Summary & Business Insights
 This project showcased the power of the modern data stack for customer retention analytics:
-- SQL-driven cohort analysis helped quantify and visualize how quickly customers repurchase.
+- SQL-driven cohort analysis helped quantify and visualise how quickly customers repurchase.
 - Recent cohorts show stronger short-term loyalty but weaker long-term engagement.
 - Customer acquisition volume is declining, highlighting a potential area of concern for the business.
 
 ### Actionable Takeaways:
 Examine strategies contributing to strong retention in May/June.
 Address issues behind weak repeat engagement in newer cohorts.
-Investigate factors causing acquisition decline and optimize marketing efforts accordingly.
+Investigate factors causing acquisition decline and optimise marketing efforts accordingly.
 
 ## Final Databricks project with SQL Queries and Visualisation: 
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html
+
+## SQL Codebook:
+https://github.com/DeepshikhaChhetri/Project-Databricks/blob/e526a332aadd49c0b1cd3b8e22ea09fbab94aa30/SQL-Query
 
 ## Presentation Video:
 https://www.loom.com/share/264e2efa4ef0416badbe6484f0985732?sid=d591e565-22df-4542-a6d6-21febc999e26
