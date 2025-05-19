@@ -49,7 +49,8 @@ Based on the analysis of the e-commerce dataset, the following summary metrics w
 
 Three visualisations were developed to analyse customer behaviour by cohort. Below are the results derived from SQL-based analysis:
 ## Visualisation 1: Retention Rate by Cohort
-**Result – Trend Over Time in Retention Rate**
+### Result – Trend Over Time in Retention Rate
+
 **Purpose:** To evaluate what percentage of customers from each monthly cohort made a second purchase within 1, 2, and 3 months after their initial purchase.
 
 **Highest Retention Rates by Time Threshold**
@@ -98,6 +99,7 @@ Three visualisations were developed to analyse customer behaviour by cohort. Bel
 1. There is a clear and consistent decline in new customer acquisition from January to June 2024.
 2. Suggests a need to investigate marketing effectiveness, seasonal demand, or changes in acquisition channels.
 
+## Dashboard
 <img width="531" alt="image" src="https://github.com/user-attachments/assets/dbeac9b6-9616-41f4-88d1-65c0f2dad7ab" />
 
 ## Final Summary & Business Insights
@@ -107,9 +109,9 @@ This project showcased the power of the modern data stack for customer retention
 - Customer acquisition volume is declining, highlighting a potential area of concern for the business.
 
 ## Actionable Takeaways:
-Examine strategies contributing to strong retention in May/June.
-Address issues behind weak repeat engagement in newer cohorts.
-Investigate factors causing acquisition decline and optimise marketing efforts accordingly.
+- Examine strategies contributing to strong retention in May/June.
+- Address issues behind weak repeat engagement in newer cohorts.
+- Investigate factors causing acquisition decline and optimise marketing efforts accordingly.
 
 ## Final Databricks project with SQL Queries and Visualisation: 
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html
