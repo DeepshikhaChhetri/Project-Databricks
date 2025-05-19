@@ -43,6 +43,12 @@ All analysis and data transformation were performed using **SQL queries** within
 ### 4. Data Visualization in Databricks Dashboards
 Three visualizations were developed to analyze customer behavior by cohort. Below are the results derived from SQL-based analysis:
 
+### Key Performance Indicators (KPIs)
+Based on the analysis of the e-commerce dataset, the following summary metrics were identified:
+- Total Customers: 1,000
+- Total Orders: 1,000
+- Total Sales: $156,795
+
 ### Visualization 1: Retention Rate by Cohort
 #### Result – Trend Over Time in Retention Rate
 **Purpose:** To evaluate what percentage of customers from each monthly cohort made a second purchase within 1, 2, and 3 months after their initial purchase.
@@ -108,4 +114,4 @@ Investigate factors causing acquisition decline and optimize marketing efforts a
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html
 
 ## Databricks Dashboard:
-[https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html)
+[[https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html)](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html)
