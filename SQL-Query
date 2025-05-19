@@ -131,6 +131,28 @@ FROM customer_orders_final
 GROUP BY TRUNC(first_order_date, 'MM')
 ORDER BY cohort_month ASC;
 
+💡 Result - Trends Over Time in Repeat Purchase Rates:
+This section examines the repeat purchase rates for different customer cohorts, specifically focusing on the percentage of customers who placed at least a 2nd, 3rd, and 4th order, segmented by their first purchase month.
+
+Trends Over Time in Repeat Purchase Rates:
+
+Analyzing the repeat purchase rates across the cohorts, ordered chronologically from January 2024 to June 2024, reveals the following potential trends -
+
+Second Order Repeat Rate: The rate at which customers place a second order remains generally high across all cohorts, frequently reaching 100%. Minor reductions are observed in the February and April 2024 cohorts. Overall, a significant upward or downward trend for the second order repeat rate is not apparent within this timeframe.
+
+Third Order Repeat Rate: The third order repeat rate suggests a downward trend in more recent cohorts, particularly pronounced in the June 2024 cohort, which exhibits a significant drop to 70.00% compared to the high 90s observed in earlier cohorts. The May 2024 cohort also shows a slightly lower third order repeat rate compared to the January and February 2024 cohorts.
+
+Fourth Order Repeat Rate: A clear downward trend is evident in the fourth order repeat rate as we progress from earlier to more recent cohorts. The rate begins at 83.33% for the January 2024 cohort and consistently declines to 60.00% for the June 2024 cohort. The May 2024 cohort also displays a notably lower fourth order repeat rate.
+
+Summary of Trends:
+
+In summary, the analysis of repeat purchase rates by cohort indicates -
+
+The second order repeat rate demonstrates relative stability at a high level across the observed period.
+The third order repeat rate shows a tendency to decrease in more recent cohorts.
+The fourth order repeat rate exhibits a distinct and consistent downward trend as the first purchase month becomes more recent. This suggests a decreasing propensity for newer customer cohorts to place four or more orders compared to those acquired earlier in the observed period.
+Consideration: It is important to acknowledge that the more recent cohorts (specifically May and June 2024) comprise a smaller number of total customers. This smaller sample size may render the calculated percentages more susceptible to individual customer behavior and potentially amplify fluctuations in the observed rates. However, the consistent downward trend in the fourth order repeat rate across the later cohorts warrants attention.
+
 🎯 Visualization 3: Cohort Size by Month
 WITH customer_first_order AS (
   SELECT
@@ -146,4 +168,23 @@ SELECT
 FROM customer_first_order
 GROUP BY TRUNC(first_order_date, 'MM')
 ORDER BY cohort_month ASC;
+
+💡 Result - Cohort Size by Month Analysis
+This section examines the size of customer cohorts based on the month of their first purchase. The cohort size is determined by the number of new customers acquired in each specific month.
+
+Largest Cohort: Based on the analysis, the month with the highest number of new customers, and therefore the largest cohort, is January 2024, with 66 new customers.
+
+Variation of Cohort Size Over Time:
+
+The cohort size exhibits a clear trend of decreasing over the observed period from January 2024 to June 2024.
+
+Initial Large Cohort: The January 2024 cohort is the largest, indicating the highest number of new customer acquisitions at the beginning of the observed period.
+
+Subsequent Decline: Following January, there is a consistent decline in the number of new customers acquired each month. The February 2024 cohort is significantly smaller than January, with 48 new customers.
+
+Continued Reduction: This downward trend continues through the subsequent months. The March 2024 cohort size reduces further to 33, followed by April 2024 with 27 new customers.
+
+Smallest Recent Cohorts: The most recent months in the dataset, May and June 2024, show the smallest cohort sizes, with 16 and 10 new customers respectively.
+
+Conclusion: The analysis of cohort size by month reveals a distinct downward trend in new customer acquisition from January 2024 to June 2024. The initial cohort in January is the largest, and the size consistently diminishes in the following months, culminating in the smallest cohorts observed in May and June 2024. This trend suggests a decreasing rate of new customer acquisition over this six-month period.
 
