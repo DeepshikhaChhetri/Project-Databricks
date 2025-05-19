@@ -56,7 +56,7 @@ SELECT * FROM cohort_analysis
 # Key Performance Indicators (KPIs):
 a. Total Customers
 SELECT 
-COUNT(customer_id) AS TotalCustomers
+COUNT (DISTINCT(customer_id)) AS TotalCustomers
 FROM default.ecom_orders_csv
 
 b. Total Orders
