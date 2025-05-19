@@ -71,49 +71,37 @@ Indicates improved customer loyalty or acquisition quality in recent months.
 3rd Order: Downward trend in recent cohorts; June cohort drops to 70.00%
 4th Order: Clear declining trend from 83.33% (Jan) to 60.00% (June)
 
-Summary
+**Summary**
 2nd purchase behavior remains strong across cohorts.
-
 3rd and 4th purchase behaviors weaken over time, especially in more recent months.
-
 May and June cohorts show lower long-term engagement.
 
-Consideration
+**Consideration**
 May/June 2024 cohorts have fewer customers, increasing volatility in rate calculations.
-
 Despite smaller samples, the downward trend is consistent and notable.
 
-Visualization 3: Cohort Size by Month
-Result – Cohort Size by Month Analysis
-Purpose: To evaluate customer acquisition volume by month (i.e., cohort size).
+### Visualization 3: Cohort Size by Month
+#### Result – Cohort Size by Month Analysis
+**Purpose:** To evaluate customer acquisition volume by month (i.e., cohort size).
 
-Key Findings
+**Key Findings**
 Largest Cohort: January 2024 – 66 customers
-
 Decline Over Time: February (48), March (33), April (27)
-
 Smallest Cohorts: May (16), June (10)
 
-Conclusion
+**Conclusion**
 There is a clear and consistent decline in new customer acquisition from January to June 2024.
-
 Suggests a need to investigate marketing effectiveness, seasonal demand, or changes in acquisition channels.
 
-Final Summary & Business Insights
+### Final Summary & Business Insights
 This project showcased the power of the modern data stack for customer retention analytics:
+- SQL-driven cohort analysis helped quantify and visualize how quickly customers repurchase.
+- Recent cohorts show stronger short-term loyalty but weaker long-term engagement.
+- Customer acquisition volume is declining, highlighting a potential area of concern for the business.
 
-SQL-driven cohort analysis helped quantify and visualize how quickly customers repurchase.
-
-Recent cohorts show stronger short-term loyalty but weaker long-term engagement.
-
-Customer acquisition volume is declining, highlighting a potential area of concern for the business.
-
-Actionable Takeaways:
-
+### Actionable Takeaways:
 Examine strategies contributing to strong retention in May/June.
-
 Address issues behind weak repeat engagement in newer cohorts.
-
 Investigate factors causing acquisition decline and optimize marketing efforts accordingly.
 
 ## Final Databricks project with SQL Queries: 
