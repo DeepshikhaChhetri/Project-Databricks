@@ -49,8 +49,9 @@ Based on the analysis of the e-commerce dataset, the following summary metrics w
 
 Three visualisations were developed to analyse customer behaviour by cohort. Below are the results derived from SQL-based analysis:
 ## Visualisation 1: Retention Rate by Cohort
-### Result – Trend Over Time in Retention Rate
+<img width="1022" alt="image" src="https://github.com/user-attachments/assets/4f6e1a03-2d58-4678-ae4b-9ac68b1707dc" />
 
+### Result – Trend Over Time in Retention Rate
 **Purpose:** To evaluate what percentage of customers from each monthly cohort made a second purchase within 1, 2, and 3 months after their initial purchase.
 
 **Highest Retention Rates by Time Threshold**
@@ -69,6 +70,8 @@ Three visualisations were developed to analyse customer behaviour by cohort. Bel
 3. Indicates **improved customer loyalty** or acquisition quality in recent months.
 
 ## Visualisation 2: Repeat Purchase Rate by Cohort
+<img width="1023" alt="image" src="https://github.com/user-attachments/assets/00b2b469-8eab-41df-9b15-4f0c6d6040e3" />
+
 ### Result – Trends Over Time in Repeat Purchase Rates
 **Purpose:** To assess how many customers from each cohort placed a 2nd, 3rd, or 4th order.
 
@@ -87,6 +90,8 @@ Three visualisations were developed to analyse customer behaviour by cohort. Bel
 - Despite smaller samples, the downward trend is consistent and notable.
 
 ## Visualisation 3: Cohort Size by Month
+<img width="1024" alt="image" src="https://github.com/user-attachments/assets/f3e37a39-8ef1-457d-8f28-9eefb4fdf92d" />
+
 ### Result – Cohort Size by Month Analysis
 **Purpose:** To evaluate customer acquisition volume by month (i.e., cohort size).
 
@@ -100,7 +105,7 @@ Three visualisations were developed to analyse customer behaviour by cohort. Bel
 2. Suggests a need to investigate marketing effectiveness, seasonal demand, or changes in acquisition channels.
 
 ## Dashboard
-<img width="531" alt="image" src="https://github.com/user-attachments/assets/dbeac9b6-9616-41f4-88d1-65c0f2dad7ab" />
+<img width="547" alt="image" src="https://github.com/user-attachments/assets/1ef3fb1e-354b-49b4-9dc0-4f2163eda63e" />
 
 ## Final Summary & Business Insights
 This project showcased the power of the modern data stack for customer retention analytics:
@@ -113,11 +118,11 @@ This project showcased the power of the modern data stack for customer retention
 - Address issues behind weak repeat engagement in newer cohorts.
 - Investigate factors causing acquisition decline and optimise marketing efforts accordingly.
 
-## Final Databricks project with SQL Queries and Visualisation: 
+## Final Databricks project with SQL Queries and Visualisation: [
 https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2637955189247778/771333345207615/4634868260923838/latest.html
 
 ## SQL Codebook:
 https://github.com/DeepshikhaChhetri/Project-Databricks/blob/e526a332aadd49c0b1cd3b8e22ea09fbab94aa30/SQL-Query
 
 ## Presentation Video:
-https://www.loom.com/share/264e2efa4ef0416badbe6484f0985732?sid=d591e565-22df-4542-a6d6-21febc999e26
+
