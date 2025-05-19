@@ -1,0 +1,127 @@
+# BigQuery:
+WITH ranked_orders AS (
+  SELECT
+    customer_id,
+    order_date,
+    ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date) AS purchase_rank
+  FROM `fivetran-project-459210.cohort_db.ecom_orders`
+),
+first_second AS (
+  SELECT
+    customer_id,
+    MAX(IF(purchase_rank = 1, order_date, NULL)) AS first_purchase,
+    MAX(IF(purchase_rank = 2, order_date, NULL)) AS second_purchase
+  FROM ranked_orders
+  WHERE purchase_rank <= 2
+  GROUP BY customer_id
+)
+SELECT
+  customer_id,
+  first_purchase,
+  second_purchase,
+  DATE_DIFF(second_purchase, first_purchase, DAY) AS days_between
+FROM first_second
+WHERE second_purchase IS NOT NULL
+ORDER BY customer_id, days_between;
+
+# Databricks
+1. EDA: Understanding the data
+SELECT * FROM default.ecom_orders_csv
+
+2. EDA: Cohort Analysis with Purchase Date Difference
+a.
+CREATE OR REPLACE TABLE cohort_analysis AS (
+WITH cust_purchase AS ( 
+  SELECT customer_id, 
+  order_date, 
+  ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date ASC) AS order_number 
+FROM default.ecom_orders_csv
+), 
+ranked_purchases AS ( 
+  SELECT customer_id, 
+  MAX(CASE WHEN order_number = 1 THEN order_date END) AS first_order_date, 
+  MAX(CASE WHEN order_number = 2 THEN order_date END) AS second_order_date 
+  FROM cust_purchase GROUP BY customer_id 
+  ) 
+  SELECT customer_id, 
+  first_order_date,
+  second_order_date,
+  date_diff(second_order_date, first_order_date) AS days_diff 
+  FROM ranked_purchases 
+  WHERE first_order_date IS NOT NULL AND second_order_date IS NOT NULL);
+
+b. 
+SELECT * FROM cohort_analysis
+
+# Key Performance Indicators (KPIs):
+a. Total Customers
+SELECT 
+COUNT(customer_id) AS TotalCustomers
+FROM default.ecom_orders_csv
+
+b. Total Orders
+SELECT 
+COUNT(order_id) AS TotalOrders
+FROM default.ecom_orders_csv
+
+c. Total Sales
+SELECT 
+ROUND(SUM(sales),2) AS TotalSales
+FROM default.ecom_orders_csv
+
+🎯 Visualization 1: Retention Rate by Cohort
+SELECT
+  TRUNC(first_order_date, 'MM') AS cohort_month,
+  COUNT(*) AS total_customers,
+  ROUND(
+    COUNT(CASE WHEN ROUND(MONTHS_BETWEEN(second_order_date, first_order_date)) = 1 THEN 1 END) * 100.0 / total_customers, 
+    2
+  ) AS retention_rate_1m,
+  ROUND(
+    COUNT(CASE WHEN ROUND(MONTHS_BETWEEN(second_order_date, first_order_date)) <= 2 THEN 1 END) * 100.0 / total_customers, 
+    2
+  ) AS retention_rate_2m,
+  ROUND(
+    COUNT(CASE WHEN ROUND(MONTHS_BETWEEN(second_order_date, first_order_date)) <= 3 THEN 1 END) * 100.0 / total_customers, 
+    2
+  ) AS retention_rate_3m
+FROM cohort_analysis
+GROUP BY TRUNC(first_order_date, 'MM')
+ORDER BY cohort_month ASC;
+
+🎯 Visualization 2: Repeat Purchase Rate by Cohort
+
+WITH customer_orders_final AS (
+  SELECT
+    customer_id,
+    MIN(order_date) AS first_order_date,
+    COUNT(*) AS total_orders
+  FROM default.ecom_orders_csv
+  GROUP BY customer_id
+)
+SELECT
+  TRUNC(first_order_date, 'MM') AS cohort_month,
+  COUNT(*) AS total_customers,
+  ROUND(COUNT(CASE WHEN total_orders >= 2 THEN 1 END) * 100.0 / COUNT(*), 2) AS repeat_rate_2nd_order,
+  ROUND(COUNT(CASE WHEN total_orders >= 3 THEN 1 END) * 100.0 / COUNT(*), 2) AS repeat_rate_3rd_order,
+  ROUND(COUNT(CASE WHEN total_orders >= 4 THEN 1 END) * 100.0 / COUNT(*), 2) AS repeat_rate_4th_order
+FROM customer_orders_final
+GROUP BY TRUNC(first_order_date, 'MM')
+ORDER BY cohort_month ASC;
+
+🎯 Visualization 3: Cohort Size by Month
+WITH customer_first_order AS (
+  SELECT
+    customer_id,
+    MIN(order_date) AS first_order_date
+  FROM default.ecom_orders_csv
+  GROUP BY customer_id
+)
+
+SELECT
+  TRUNC(first_order_date, 'MM') AS cohort_month,
+  COUNT(*) AS new_customers
+FROM customer_first_order
+GROUP BY TRUNC(first_order_date, 'MM')
+ORDER BY cohort_month ASC;
+
