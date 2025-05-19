@@ -89,6 +89,28 @@ FROM cohort_analysis
 GROUP BY TRUNC(first_order_date, 'MM')
 ORDER BY cohort_month ASC;
 
+💡 Result - Trend Over Time in Retention Rate:
+This section analyzes the retention rates of customer cohorts based on their first purchase month. Retention rates are calculated as the percentage of customers within a cohort who placed a second order within 1, 2, and 3 months of their initial purchase.
+
+Highest Retention Rates by Time Threshold:
+
+The cohort demonstrating the highest retention rate for each specified time threshold is as follows -
+
+1-Month Retention: The June 2024 cohort exhibits the highest 1-month retention rate at 80.00%.
+2-Month Retention: The June 2024 cohort demonstrates the highest 2-month retention rate at 100.00%.
+3-Month Retention: Both the May 2024 and June 2024 cohorts show the highest 3-month retention rate at 100.00%.
+Notable Differences in Short-Term Retention Across Cohorts:
+
+Significant variations in short-term retention rates are observed across the analyzed customer cohorts -
+
+One-Month Retention Disparity: The 1-month retention rates range considerably, from a low of 34.62% for the April 2024 cohort to a high of 80.00% for the June 2024 cohort. The February 2024 cohort also exhibits a relatively low 1-month retention rate of 44.68%. In contrast, the May and June 2024 cohorts demonstrate substantially higher initial retention.
+
+Two-Month Retention Improvement: Generally, the 2-month retention rates show an increase across all cohorts compared to the 1-month rates, indicating that a larger proportion of customers make a repeat purchase within a two-month window. However, the February and April 2024 cohorts continue to exhibit comparatively lower 2-month retention rates. The June 2024 cohort achieves a perfect 100.00% retention within two months.
+
+Three-Month Retention Convergence: The 3-month retention rates further increase for most cohorts. Notably, both the May and June 2024 cohorts reach a 100.00% retention rate within three months. While the earlier cohorts (January, February, March, April 2024) show a gradual improvement in retention over the three-month period, the April 2024 cohort still lags behind the others.
+
+Conclusion: The analysis reveals notable differences in short-term customer retention across the examined cohorts. The more recent cohorts (May and June 2024) demonstrate stronger initial loyalty, as evidenced by their higher retention rates within the first three months. Conversely, the February and April 2024 cohorts consistently exhibit lower short-term retention, suggesting potential factors impacting customer engagement or acquisition during those periods that warrant further investigation. The overall trend of increasing retention rates from the 1-month to the 3-month threshold is expected as customers have more time to make a second purchase.
+
 🎯 Visualization 2: Repeat Purchase Rate by Cohort
 
 WITH customer_orders_final AS (
